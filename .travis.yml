@@ -1,0 +1,17 @@
+language: python
+python:
+  - "3.8"
+
+install:
+  - pip install awscli aws-sam-cli pytest pytest-mock
+
+script:
+  - sam build
+  - python -m pytest tests -v
+
+after_script:
+  - echo Done
+
+notifications:
+  email:
+    - d.madama@gmail.com
