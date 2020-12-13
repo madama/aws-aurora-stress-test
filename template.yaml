@@ -5,7 +5,7 @@ Description: >
 
 Globals:
   Function:
-    Timeout: 3
+    Timeout: 30
     Environment:
       Variables:
         AWS_CODEGURU_PROFILER_GROUP_ARN: arn:aws:codeguru-profiler:eu-west-1:952137551633:profilingGroup/aws-aurora-stress-test
