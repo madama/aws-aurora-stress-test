@@ -14,7 +14,7 @@ script:
 
 deploy:
   provider: script
-  script: sam deploy --template-file packaged.yaml --stack-name aws-aurora-stress-test
+  script: sam deploy --template-file packaged.yaml --stack-name aws-aurora-stress-test --region us-east-1
   skip_cleanup: true
   on:
     branch: master
