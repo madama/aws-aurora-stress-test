@@ -4,6 +4,7 @@ python:
 
 install:
   - pip install awscli aws-sam-cli pytest pytest-mock
+  - pip install -r src/requirements.txt
 
 script:
   - sam build

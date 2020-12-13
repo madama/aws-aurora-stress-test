@@ -1,1 +1,2 @@
 requests
+codeguru_profiler_agent
