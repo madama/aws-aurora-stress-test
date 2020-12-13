@@ -1,3 +1,4 @@
 .aws-sam/
+.vscode/
 src/__pycache__
 tests/unit/__pycache__
