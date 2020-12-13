@@ -20,6 +20,8 @@ Resources:
       Tracing: Active
       Policies: AWSLambdaVPCAccessExecutionRole
       VpcConfig:
+        SecurityGroupIds:
+          - sg-04653030
         SubnetIds:
           - subnet-a1ceb4af
           - subnet-f77afa91
