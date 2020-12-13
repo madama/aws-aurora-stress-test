@@ -12,6 +12,13 @@ script:
   - sam build
   - sam package --template-file template.yaml --s3-bucket sam-deploy-952137551633 --output-template-file packaged.yaml
 
+deploy:
+  provider: script
+  script: sam deploy --template-file packaged.yaml --stack-name aws-aurora-stress-test
+  skip_cleanup: true
+  on:
+    branch: master
+
 after_script:
   - echo Done
 
