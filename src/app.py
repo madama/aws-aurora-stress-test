@@ -1,5 +1,4 @@
 import json
-import requests
 
 from codeguru_profiler_agent import with_lambda_profiler
 
