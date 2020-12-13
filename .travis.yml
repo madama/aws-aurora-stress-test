@@ -7,8 +7,10 @@ install:
   - pip install -r src/requirements.txt
 
 script:
-  - sam build
   - python -m pytest tests -v
+  - sam validate
+  - sam build
+  - sam package --template-file template.yaml --s3-bucket sam-deploy-952137551633 --output-template-file packaged.yaml
 
 after_script:
   - echo Done
