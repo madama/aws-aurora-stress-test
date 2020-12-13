@@ -18,6 +18,15 @@ Resources:
       Handler: app.lambda_handler
       Runtime: python3.8
       Tracing: Active
+      Policies: AWSLambdaVPCAccessExecutionRole
+      VpcConfig:
+        SubnetIds:
+          - subnet-a1ceb4af
+          - subnet-f77afa91
+          - subnet-68f47a49
+          - subnet-efcb47b0
+          - subnet-45045708
+          - subnet-79cb1c48
       Events:
         StressTest:
           Type: Api
