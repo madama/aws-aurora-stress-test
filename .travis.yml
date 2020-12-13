@@ -9,7 +9,7 @@ install:
 script:
   - python -m pytest tests -v
   - sam validate
-  - sam build
+  - sam build --manifest src/requirements.txt
   - sam package --template-file template.yaml --s3-bucket sam-deploy-952137551633-us-east-1 --output-template-file packaged.yaml
 
 deploy:
