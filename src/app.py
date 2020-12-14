@@ -22,8 +22,8 @@ def lambda_handler(event, context):
                 conn = pymysql.connect(host, user=user, port=3306, passwd=password, db=dbname)
                 cursor = conn.cursor()                                    
                 cursor.execute("call eat_cpu(10000);")
-                #for result in cursor.fetchall():
-                #    print(result)
+                for result in cursor.fetchall():
+                    print(result)
                 message = "Stressed!"
             except:
                 print(print("Unexpected error:", sys.exc_info()[0]))
