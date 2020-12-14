@@ -9,6 +9,7 @@ Globals:
     Environment:
       Variables:
         AWS_CODEGURU_PROFILER_GROUP_ARN: arn:aws:codeguru-profiler:eu-west-1:952137551633:profilingGroup/aws-aurora-stress-test
+        AWS_CODEGURU_PROFILER_TARGET_REGION: eu-west-1
 
 Resources:
   StressTestFunction:
