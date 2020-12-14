@@ -24,6 +24,7 @@ def lambda_handler(event, context):
                 cursor.execute("call eat_cpu(10000);")
                 for result in cursor.fetchall():
                     print(result)
+                conn.commit()
                 message = "Stressed!"
             except:
                 print(print("Unexpected error:", sys.exc_info()[0]))
