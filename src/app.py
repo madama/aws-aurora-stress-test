@@ -4,9 +4,9 @@ import pymysql
 import sys
 
 
-from codeguru_profiler_agent import with_lambda_profiler
+#from codeguru_profiler_agent import with_lambda_profiler
 
-@with_lambda_profiler()
+#@with_lambda_profiler()
 def lambda_handler(event, context):
     #print(context)
     #print(event)
