@@ -8,8 +8,8 @@ from codeguru_profiler_agent import with_lambda_profiler
 
 @with_lambda_profiler()
 def lambda_handler(event, context):
-    #print(context)
-    #print(event)
+    print(context)
+    print(event)
     message = "hello world"
     if (event["queryStringParameters"] and "doIt" in event["queryStringParameters"] and event["queryStringParameters"]["doIt"] == "true"):
         if ("DB_HOST" in os.environ and "DB_USER" in os.environ and "DB_PASSWORD" in os.environ and "DB_NAME" in os.environ):
