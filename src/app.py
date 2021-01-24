@@ -4,9 +4,9 @@ import pymysql
 import sys
 
 
-from codeguru_profiler_agent import with_lambda_profiler
+#from codeguru_profiler_agent import with_lambda_profiler
 
-@with_lambda_profiler()
+#@with_lambda_profiler()
 def lambda_handler(event, context):
     #print(context)
     #print(event)
@@ -19,7 +19,7 @@ def lambda_handler(event, context):
                 password = os.environ["DB_PASSWORD"]
                 dbname = os.environ["DB_NAME"]
                 print(host, user, password, dbname)
-                conn = pymysql.connect(host, user=user, port=3306, passwd=password, db=dbname)
+                conn = pymysql.connect(host=host, user=user, port=3306, password=password, database=dbname)
                 cursor = conn.cursor()                                    
                 cursor.execute("call eat_cpu(10000);")
                 for result in cursor.fetchall():
